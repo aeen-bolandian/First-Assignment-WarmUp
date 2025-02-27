@@ -23,6 +23,23 @@ public class Exercises {
      */
     public long fibonacciIndex(long n) {
         // todo
+        int first = 0;
+        int second = 1;
+        int temp = 0;
+        int counter = 2;
+        if(n == 0)
+            return 0;
+        else if(n == 1)
+            return 1;
+        while (temp < n)
+        {
+            temp = first + second;
+            first = second;
+            second = temp;
+            if(temp == n)
+                return counter;
+            counter++;
+        }
         return -1;
     }
 
