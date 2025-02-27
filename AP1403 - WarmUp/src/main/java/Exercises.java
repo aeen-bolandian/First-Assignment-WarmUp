@@ -5,6 +5,13 @@ public class Exercises {
      */
     public boolean isPrime(long n) {
         // todo
+        if (n == 1)
+            return true;
+        for(long i = 2; i <= n; i++)
+        {
+            if(n % i == 0)
+                    return true;
+        }
         return false;
     }
 
