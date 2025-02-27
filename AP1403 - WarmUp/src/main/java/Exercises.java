@@ -39,7 +39,20 @@ public class Exercises {
      */
     public char[][] generateTriangle(int n) {
         // todo
-        return null;
+        char[][] triangle = new char[n][];
+        for (int i = 0; i < n; i++) {
+            triangle[i] = new char[i + 1];
+            triangle[i][0] = '*';
+            triangle[i][i] = '*';
+            for(int j = 1; j < i; j++) {
+                triangle[i][j] = ' ';
+            }
+        }
+        for(int j = 0; j < n; j++)
+        {
+            triangle[n - 1][j] = '*';
+        }
+        return triangle;
     }
 
     public static void main(String[] args) {
